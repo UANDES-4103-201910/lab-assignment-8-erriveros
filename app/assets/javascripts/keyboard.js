@@ -12,9 +12,31 @@ class keyboardController{
 
 	keyListnerInput(key){
 		$(key).click(function(){
-			if ($(this).text() !== 'Bksp' && $(this).text() !== 'Shift' && $(this).text() !== 'Cancel' && $(this).text() !== 'Accept'){
-				console.log('ye');
+			if ($(this).attr('id') == 'enter'){
+				console.log('w');
+				$('#input').append('<br>');
+			}
+
+			if ($(this).attr('id') == 'space'){
+				console.log('s');
+				$('#input').append('_');
+			}
+			if ($(this).attr('id') == 'tab'){
+				console.log('w');
+				$('#input').append('_____');
+			}
+			if ($(this).attr('id') == 'Bksp'){
+				var a = $('input').text();
+				$('input').empty();
+
+				$('input').append(a.slice(0, -1))
+			}
+			if ($(this).attr('id') != 'Bksp' && $(this).attr('id') != 'shift' && $(this).attr('id') != 'cancel' && 
+			$(this).attr('id') != 'accept' && $(this).attr('id') != 'shift2' && $(this).attr('id') != 'enter' && 
+			$(this).attr('id') != 'space' && $(this).attr('id') != 'cancel' && $(this).attr('id') != 'tab'){
 				$('#input').append($(this).text());
+
+			
 		}
 	});
 	}
