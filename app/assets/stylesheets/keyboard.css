@@ -55,3 +55,9 @@ html {
 .input {
 	color: #00F900;
 }
+
+.snaped {
+	position: fixed;
+	bottom: 0;
+	width:100%;
+}
